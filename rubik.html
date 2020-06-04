@@ -140,7 +140,7 @@ function eval_turn(cube_arr) {
     if (filt_turns==null) { draw_cube(cube_arr); return cube_arr; }
     let list=[]; let prev='';
     for (let i=0; i<filt_turns.length; i++) {
-        let t=filt_turns[i]; let tick=String.fromCharCode(180);
+        let t=filt_turns[i];
         if (t!=='2' && t!=='-') {
             list.push(t); prev=t;
         } else {
@@ -176,9 +176,9 @@ function eval_turn(cube_arr) {
     return cube_arr;
 }
 
-function canvas_mouse(x, y) {
-    let diff=15; let evt=window.event; let shiftKeyDown=null;
-    if (evt.shiftKey) { shiftKeyDown=true; } else { shiftKeyDown=false; }
+function canvas_mouse(cube_arr) {
+    let diff=15; let shiftKeyDown=event.shiftKey;
+    let x=event.clientX; let y=event.clientY;
     let canvas_x=x-document.getElementById('rubik').getBoundingClientRect().left;
     let canvas_y=y-document.getElementById('rubik').getBoundingClientRect().top;
     if ((Math.abs(canvas_x-185)<diff) && (Math.abs(canvas_y-75)<diff)) {
@@ -205,5 +205,5 @@ function canvas_mouse(x, y) {
 <label>turns:<input id="turns" type="text" size="50"></label>
 <input type="button" value="submit turns" onclick="eval_turn(cube_arr);">
 <input type="button" value="reset cube" onclick="init_cube();"><br />
-<div style="padding: 10px;"><canvas onclick="canvas_mouse(event.clientX, event.clientY);" id="rubik" width="745" height="360"></canvas></div>
+<div style="padding: 10px;"><canvas onmousedown="canvas_mouse(cube_arr);" id="rubik" width="745" height="360"></canvas></div>
 </div></body></html>
