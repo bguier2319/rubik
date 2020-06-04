@@ -1,0 +1,13 @@
+<html><head><script>
+function eval_turn() {
+    let turns=document.getElementById("turns").value.toLowerCase();
+    for (let i=0; i<turns.length; i++) {
+        alert(turns.charCodeAt(i));
+        
+    }
+}
+</script></head>
+<body><div style="width: 100%; text-align: center; font-family: verdana,sans-serif; font-size: 12px; white-space: nowrap">
+<label>turns:<input id="turns" type="text" size="50"></label>
+<input type="button" value="submit turns" onclick=eval_turn();>
+</div></body></html>
