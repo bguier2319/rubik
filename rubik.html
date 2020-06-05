@@ -2,6 +2,7 @@
 <html lang="en"><head><title>Rubik's Cube</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script>
+let cube_arr=Array();
 function init_cube() {
     let up_arr=["white", "white", "white", "white", "white", "white", "white", "white", "white"];
     let down_arr=["yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow"];
@@ -176,7 +177,7 @@ function eval_turn(cube_arr) {
     return cube_arr;
 }
 
-function canvas_mouse(cube_arr) {
+function canvas_mouse(cube_arr, event) {
     let diff=15; let shiftKeyDown=event.shiftKey;
     let x=event.clientX; let y=event.clientY;
     let canvas_x=x-document.getElementById('rubik').getBoundingClientRect().left;
@@ -205,5 +206,5 @@ function canvas_mouse(cube_arr) {
 <label>turns:<input id="turns" type="text" size="50"></label>
 <input type="button" value="submit turns" onclick="eval_turn(cube_arr);">
 <input type="button" value="reset cube" onclick="init_cube();"><br />
-<div style="padding: 10px;"><canvas onmousedown="canvas_mouse(cube_arr);" id="rubik" width="745" height="360"></canvas></div>
+<div style="padding: 10px;"><canvas onmousedown="canvas_mouse(cube_arr, event);" id="rubik" width="745" height="360"></canvas></div>
 </div></body></html>
