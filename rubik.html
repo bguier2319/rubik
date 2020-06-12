@@ -177,6 +177,10 @@ function eval_turn(cube_arr) {
     return cube_arr;
 }
 
+function cube_enter(cube_arr, event) {
+    if (event.keyCode===13) { eval_turn(cube_arr); }
+}
+
 function canvas_mouse(cube_arr, event) {
     let diff=15; let shiftKeyDown=event.shiftKey;
     let x=event.clientX; let y=event.clientY;
@@ -203,7 +207,7 @@ function canvas_mouse(cube_arr, event) {
 }
 </script></head>
 <body onload="init_cube();"><div style="width: 100%; text-align: center; font-family: verdana,sans-serif; font-size: 12px; white-space: nowrap">
-<label>turns:<input id="turns" type="text" size="50"></label>
+<label>turns:<input id="turns" type="text" size="50" onkeypress="cube_enter(cube_arr, event)"></label>
 <input type="button" value="submit turns" onclick="eval_turn(cube_arr);">
 <input type="button" value="reset cube" onclick="init_cube();"><br />
 <div style="padding: 10px;"><canvas onmousedown="canvas_mouse(cube_arr, event);" id="rubik" width="745" height="360"></canvas></div>
