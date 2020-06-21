@@ -150,7 +150,7 @@ function eval_turn(cube_arr) {
     let turns=document.getElementById("turns").value.toLowerCase();
     let filt_turns=turns.match(/[udlrfb2\-]/g);
     if (filt_turns===null) { document.getElementById("turns").value=''; return; }
-document.getElementById("turns").value=filt_turns.join('');
+    document.getElementById("turns").value=filt_turns.join('');
     let list=[]; let prev='';
     for (let i=0; i<filt_turns.length; i++) {
         let t=filt_turns[i];
