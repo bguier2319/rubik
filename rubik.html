@@ -198,39 +198,51 @@ function canvas_mouse(cube_arr, event) {
     let canvas_x=x-document.getElementById('rubik').getBoundingClientRect().left;
     let canvas_y=y-document.getElementById('rubik').getBoundingClientRect().top;
     if ((Math.abs(canvas_x-185)<diff) && (Math.abs(canvas_y-75)<diff)) {
-        document.getElementById("turns").value+="u";
-        if (altKeyDown) { draw_cube(u(u(cube_arr))); document.getElementById("turns").value+="2"; }
-        else if (shiftKeyDown) { draw_cube(u(u(u(cube_arr)))); document.getElementById("turns").value+="-"; }
+        document.getElementById("turns").value+="U";
+        if (altKeyDown) { draw_cube(u(u(cube_arr)));
+            document.getElementById("turns").value+="2"; }
+        else if (shiftKeyDown) { draw_cube(u(u(u(cube_arr))));
+            document.getElementById("turns").value+="-"; }
         else { draw_cube(u(cube_arr)); }
     }
     if ((Math.abs(canvas_x-102)<diff) && (Math.abs(canvas_y-211)<diff)) {
-        document.getElementById("turns").value+="l";
-        if (altKeyDown) { draw_cube(l(l(cube_arr))); document.getElementById("turns").value+="2"; }
-        else if (shiftKeyDown) { draw_cube(l(l(l(cube_arr)))); document.getElementById("turns").value+="-"; }
+        document.getElementById("turns").value+="L";
+        if (altKeyDown) { draw_cube(l(l(cube_arr)));
+            document.getElementById("turns").value+="2"; }
+        else if (shiftKeyDown) { draw_cube(l(l(l(cube_arr))));
+            document.getElementById("turns").value+="-"; }
         else { draw_cube(l(cube_arr)); }
     }
     if ((Math.abs(canvas_x-268)<diff) && (Math.abs(canvas_y-211)<diff)) {
-        document.getElementById("turns").value+="f";
-        if (altKeyDown) { draw_cube(f(f(cube_arr))); document.getElementById("turns").value+="2"; }
-        else if (shiftKeyDown) { draw_cube(f(f(f(cube_arr)))); document.getElementById("turns").value+="-"; }
+        document.getElementById("turns").value+="F";
+        if (altKeyDown) { draw_cube(f(f(cube_arr)));
+            document.getElementById("turns").value+="2"; }
+        else if (shiftKeyDown) { draw_cube(f(f(f(cube_arr))));
+            document.getElementById("turns").value+="-"; }
         else { draw_cube(f(cube_arr)); } 
     }
     if ((Math.abs(canvas_x-558)<diff) && (Math.abs(canvas_y-281)<diff)) {
-        document.getElementById("turns").value+="d";
-        if (altKeyDown) { draw_cube(d(d(cube_arr))); document.getElementById("turns").value+="2"; }
-        else if (shiftKeyDown) { draw_cube(d(d(d(cube_arr)))); document.getElementById("turns").value+="-"; }
+        document.getElementById("turns").value+="D";
+        if (altKeyDown) { draw_cube(d(d(cube_arr)));
+            document.getElementById("turns").value+="2"; }
+        else if (shiftKeyDown) { draw_cube(d(d(d(cube_arr))));
+            document.getElementById("turns").value+="-"; }
         else { draw_cube(d(cube_arr)); }
     }
     if ((Math.abs(canvas_x-477)<diff) && (Math.abs(canvas_y-144)<diff)) {
-        document.getElementById("turns").value+="r";
-        if (altKeyDown) { draw_cube(r(r(cube_arr))); document.getElementById("turns").value+="2"; }
-        else if (shiftKeyDown) { draw_cube(r(r(r(cube_arr)))); document.getElementById("turns").value+="-"; }
+        document.getElementById("turns").value+="R";
+        if (altKeyDown) { draw_cube(r(r(cube_arr)));
+            document.getElementById("turns").value+="2"; }
+        else if (shiftKeyDown) { draw_cube(r(r(r(cube_arr))));
+            document.getElementById("turns").value+="-"; }
         else { draw_cube(r(cube_arr)); } 
     }
     if ((Math.abs(canvas_x-639)<diff) && (Math.abs(canvas_y-144)<diff)) {
-        document.getElementById("turns").value+="b";
-        if (altKeyDown) { draw_cube(b(b(cube_arr))); document.getElementById("turns").value+="2"; }
-        else if (shiftKeyDown) { draw_cube(b(b(b(cube_arr)))); document.getElementById("turns").value+="-"; }
+        document.getElementById("turns").value+="B";
+        if (altKeyDown) { draw_cube(b(b(cube_arr)));
+            document.getElementById("turns").value+="2"; }
+        else if (shiftKeyDown) { draw_cube(b(b(b(cube_arr))));
+            document.getElementById("turns").value+="-"; }
         else { draw_cube(b(cube_arr)); } 
     }
 }
